@@ -944,14 +944,14 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
 .qn-st.neg{color:#ecba6a;border-color:#ecba6a}
 .qn-dt{font:400 1.2cqw/1 var(--font-dati);letter-spacing:.06em;color:var(--inchiostro-tenue)}
 .qn-c h5{font:700 1.75cqw/1.15 var(--font-display);color:var(--inchiostro)}
-.qn-focus{position:absolute;right:1cqw;top:-1.3cqw;background:var(--nucleo);color:#05060f;font:700 .95cqw/1 var(--font-dati);letter-spacing:.12em;padding:.4cqw .7cqw}
+.qn-focus{position:absolute;right:1cqw;top:-1.6cqw;background:var(--nucleo);color:#05060f;font:700 1.15cqw/1 var(--font-dati);letter-spacing:.12em;padding:.5cqw .85cqw}
 .play .qn-c.foc{animation:up 1s cubic-bezier(.2,.7,.2,1) var(--d) both,focus14 .6s ease var(--f) forwards}
 .play .qn-c.dim{animation:up 1s cubic-bezier(.2,.7,.2,1) var(--d) both,dim14 .6s ease var(--f) forwards}
-.qn-c.foc{z-index:3;transform-origin:50% 40%}
-.frame:not(.play) .qn-c.foc{outline:.16cqw solid var(--nucleo);box-shadow:0 0 2.4cqw rgba(198,244,50,.28),0 1.6cqw 3cqw rgba(0,0,0,.7);transform:scale(1.16);background:#161a36}
-.frame:not(.play) .qn-c.dim{opacity:.38}
-@keyframes focus14{from{outline:.16cqw solid transparent;box-shadow:none;transform:none;background:#0f1125}to{outline:.16cqw solid var(--nucleo);box-shadow:0 0 2.4cqw rgba(198,244,50,.28),0 1.6cqw 3cqw rgba(0,0,0,.7);transform:scale(1.16);background:#161a36}}
-@keyframes dim14{from{opacity:1}to{opacity:.38}}
+.qn-c.foc{z-index:3;transform-origin:50% 0}
+.frame:not(.play) .qn-c.foc{outline:.34cqw solid var(--nucleo);box-shadow:0 0 0 .5cqw rgba(198,244,50,.18),0 0 5cqw rgba(198,244,50,.55),0 2cqw 4cqw rgba(0,0,0,.8);transform:scale(1.34);background:#1b2045}
+.frame:not(.play) .qn-c.dim{opacity:.2;filter:grayscale(1)}
+@keyframes focus14{from{outline:.34cqw solid transparent;box-shadow:none;transform:none;background:#0f1125}to{outline:.34cqw solid var(--nucleo);box-shadow:0 0 0 .5cqw rgba(198,244,50,.18),0 0 5cqw rgba(198,244,50,.55),0 2cqw 4cqw rgba(0,0,0,.8);transform:scale(1.34);background:#1b2045}}
+@keyframes dim14{from{opacity:1;filter:none}to{opacity:.2;filter:grayscale(1)}}
 .dot15{position:absolute;left:4.4cqw;right:4.4cqw;top:10cqw;bottom:10.6cqw;z-index:4;background:rgba(14,17,38,.86)}
 .frame:not(.play) .coda{opacity:0}
 .dot15 figure{position:absolute;margin:0;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6cqw}
@@ -1031,7 +1031,7 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
   <div class="wrap">
     <h2 id="h-mt">Il montaggio</h2>
     <p class="occhiello">Montaggio dalla rev 5 con la parte fondi della rev 6, 2:59: voce di Charon (Google), scelta dai provini, un solo tema musicale in quattro parti, tenuto sotto la voce: sottofondo nell’apertura (scene 1–4), leggero crescendo (5–12), clou (13–16), ritorno calmo sul finale (17–18), sottotitoli impressi. Gli ingressi dei dati sono agganciati alle parole della voce.</p>
-    <video controls preload="metadata" playsinline poster="assets/final/orbita-montaggio.jpg?v=1795694129" src="assets/final/orbita-montaggio.mp4?v=1795694129"></video>
+    <video controls preload="metadata" playsinline poster="assets/final/orbita-montaggio.jpg?v=1795706871" src="assets/final/orbita-montaggio.mp4?v=1795706871"></video>
   </div>
 </section>
 
@@ -1083,7 +1083,7 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
         <div class="frame " data-dur="3.5" tabindex="0" role="button" aria-label="Scena 1, rivedi animazione">
           <div class="stage">
             <div style="position:absolute;inset:0;background:#000"></div>
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="0" data-rate="1.4" src="assets/video/v3-terra.mp4?v=1795694129" poster="assets/img/v3-terra.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="0" data-rate="1.4" src="assets/video/v3-terra.mp4?v=1795706871" poster="assets/img/v3-terra.jpg?v=1795706871" muted playsinline preload="none"></video>
           </div>
           <span class="tc">Sc. 01 · 0:00,0 – 0:03,5</span><span class="replay">↻ Rivedi</span><div class="safe"></div><div class="subz"></div>
         </div>
@@ -1101,8 +1101,8 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-02">
         <div class="frame " data-dur="3.0" tabindex="0" role="button" aria-label="Scena 2, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="2.5" data-rate="2.0" src="assets/video/v3-italia-c.mp4?v=1795694129" poster="assets/img/v3-italia-c.jpg?v=1795694129" muted playsinline preload="none"></video>
-            <video class="ph clip2 a-cut" style="--d:1.25s;z-index:2" data-start="1.25" data-off="0" data-rate="2.6" src="assets/video/v3-tuffo-b.mp4?v=1795694129" poster="assets/img/v3-tuffo-b.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="2.5" data-rate="2.0" src="assets/video/v3-italia-c.mp4?v=1795706871" poster="assets/img/v3-italia-c.jpg?v=1795706871" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:1.25s;z-index:2" data-start="1.25" data-off="0" data-rate="2.6" src="assets/video/v3-tuffo-b.mp4?v=1795706871" poster="assets/img/v3-tuffo-b.jpg?v=1795706871" muted playsinline preload="none"></video>
           </div>
           <span class="tc">Sc. 02 · 0:03,5 – 0:06,5</span><span class="replay">↻ Rivedi</span><div class="safe"></div><div class="subz"></div>
         </div>
@@ -1120,9 +1120,9 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-03">
         <div class="frame " data-dur="4.5" tabindex="0" role="button" aria-label="Scena 3, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="0.5" data-rate="1.0" src="assets/video/v3-navigatore2.mp4?v=1795694129" poster="assets/img/v3-navigatore2.jpg?v=1795694129" muted playsinline preload="none"></video>
-            <video class="ph clip2 a-cut" style="--d:1.5s;z-index:2" data-start="1.5" data-off="0.5" data-rate="1.0" src="assets/video/v3-pos-bar.mp4?v=1795694129" poster="assets/img/v3-pos-bar.jpg?v=1795694129" muted playsinline preload="none"></video>
-            <video class="ph clip2 a-cut" style="--d:3.0s;z-index:3" data-start="3.0" data-off="0.8" data-rate="1.0" src="assets/video/19_agr-trattore.mp4?v=1795694129" poster="assets/img/19_agr-trattore.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="0.5" data-rate="1.0" src="assets/video/v3-navigatore2.mp4?v=1795706871" poster="assets/img/v3-navigatore2.jpg?v=1795706871" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:1.5s;z-index:2" data-start="1.5" data-off="0.5" data-rate="1.0" src="assets/video/v3-pos-bar.mp4?v=1795706871" poster="assets/img/v3-pos-bar.jpg?v=1795706871" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:3.0s;z-index:3" data-start="3.0" data-off="0.8" data-rate="1.0" src="assets/video/19_agr-trattore.mp4?v=1795706871" poster="assets/img/19_agr-trattore.jpg?v=1795706871" muted playsinline preload="none"></video>
           </div>
           <span class="tc">Sc. 03 · 0:06,5 – 0:11,0</span><span class="replay">↻ Rivedi</span><div class="safe"></div><div class="subz"></div>
         </div>
@@ -1141,8 +1141,8 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-04">
         <div class="frame " data-dur="4.5" tabindex="0" role="button" aria-label="Scena 4, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="0.9" data-rate="1.0" src="assets/video/v3-moneta-sd.mp4?v=1795694129" poster="assets/img/v3-moneta-sd.jpg?v=1795694129" muted playsinline preload="none"></video>
-            <video class="ph clip2 a-cut" style="--d:2.9s;z-index:2" data-start="2.9" data-off="0" data-rate="2.8" src="assets/video/v3-onde-italia.mp4?v=1795694129" poster="assets/img/v3-onde-italia.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="0.9" data-rate="1.0" src="assets/video/v3-moneta-sd.mp4?v=1795706871" poster="assets/img/v3-moneta-sd.jpg?v=1795706871" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:2.9s;z-index:2" data-start="2.9" data-off="0" data-rate="2.8" src="assets/video/v3-onde-italia.mp4?v=1795706871" poster="assets/img/v3-onde-italia.jpg?v=1795706871" muted playsinline preload="none"></video>
           </div>
           <span class="tc">Sc. 04 · 0:11,0 – 0:15,5</span><span class="replay">↻ Rivedi</span><div class="safe"></div><div class="subz"></div>
         </div>
@@ -1160,7 +1160,7 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-05">
         <div class="frame " data-dur="7.5" tabindex="0" role="button" aria-label="Scena 5, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="0.68" src="assets/video/v3-linea-produzione.mp4?v=1795694129" poster="assets/img/v3-linea-produzione.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="0.68" src="assets/video/v3-linea-produzione.mp4?v=1795706871" poster="assets/img/v3-linea-produzione.jpg?v=1795706871" muted playsinline preload="none"></video>
             <div class="scuro"></div>
             <div class="g-tit a-up" style="--d:0.2s"><h4>Fatturato della filiera spaziale italiana</h4><p>€/mld</p></div>
             <div style="position:absolute;left:4.4cqw;top:11.2cqw;z-index:5;--d:4.4s" class="a-pop"><span class="badge">+63% sul 2021</span></div>
@@ -1175,9 +1175,9 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
         <div class="info">
           <p class="idx">Scena 05 · Il fatturato <span class="chip grafico">Grafico</span></p>
           <dl>
-            <div><dt>Voiceover</dt><dd class="vo">La filiera italiana fattura tre virgola uno miliardi, il sessantatré per cento in più del duemilaventuno.<span class="w">16 parole · circa 7,3 s a 2,2 parole al secondo</span></dd></div>
+            <div><dt>Voiceover</dt><dd class="vo">La filiera italiana fattura tre virgola uno miliardi, il sessantatre per cento in più del duemilaventuno.<span class="w">16 parole · circa 7,3 s a 2,2 parole al secondo</span></dd></div>
             <div><dt>Su schermo</dt><dd>Grafico a barre «Fatturato della filiera spaziale italiana» (€/mld): solo due barre, 2021 <b>€1,9 mld</b> e 2024 <b>€3,1 mld</b> (tolti il 2022 e il 2023 non disponibile), badge <mark>+63% sul 2021</mark>.</dd></div>
-            <div><dt>Ritmo e sincronia</dt><dd class="prompt">Sfondo: stabilimento scurito. La barra 2021 è già a schermo; la barra 2024 cresce su «tre virgola uno miliardi» (circa 2,0 s); il badge arriva su «sessantatré per cento» (circa 4,4 s).</dd></div>
+            <div><dt>Ritmo e sincronia</dt><dd class="prompt">Sfondo: stabilimento scurito. La barra 2021 è già a schermo; la barra 2024 cresce su «tre virgola uno miliardi» (circa 2,0 s); il badge arriva su «sessantatre per cento» (circa 4,4 s).</dd></div>
             <div><dt>Materiale</dt><dd class="prompt">Grafico su v3-linea-produzione scurita. Dati dal sito.</dd></div>
             
           </dl>
@@ -1234,7 +1234,7 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-07">
         <div class="frame " data-dur="11.0" tabindex="0" role="button" aria-label="Scena 7, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="0.46" src="assets/video/v3-banco-prova.mp4?v=1795694129" poster="assets/img/v3-banco-prova.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="0.46" src="assets/video/v3-banco-prova.mp4?v=1795706871" poster="assets/img/v3-banco-prova.jpg?v=1795706871" muted playsinline preload="none"></video>
             <div class="scuro"></div>
             <div class="g-tit a-up" style="--d:0.2s"><h4>L'impatto della spesa</h4></div>
             <div class="kp a-up" style="--d:1.1s;left:4.4cqw;top:11.2cqw;width:28.8cqw;height:16.6cqw;justify-content:center"><span class="lt">PIL</span><span class="n">€2,1<em>mld</em></span></div>
@@ -1282,7 +1282,7 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-09">
         <div class="frame " data-dur="7.5" tabindex="0" role="button" aria-label="Scena 9, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="1.35" src="assets/video/euro-italia.mp4?v=1795694129" poster="assets/img/euro-italia.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="1.35" src="assets/video/euro-italia.mp4?v=1795706871" poster="assets/img/euro-italia.jpg?v=1795706871" muted playsinline preload="none"></video>
             <div class="scuro l"></div>
             <div class="g-tit a-up" style="--d:0s"><h4>Come si propaga il PIL</h4><p>€2.120 mln di PIL attivato</p></div>
             <div class="canali"><div class="seg"><span class="lb">Diretto</span><div class="cb"><i class="dir" style="--d:.5s"></i><span>31%</span></div><div class="ft"><b>€660 mln</b><small>imprese spaziali</small></div></div><div class="seg"><span class="lb">Indiretto</span><div class="cb"><i class="ind-s"></i><i class="ind a-fade" style="--d:3.7s"></i><span class="a-fade" style="--d:3.7s">33%</span></div><div class="ft a-fade" style="--d:3.7s"><b>€705 mln</b><small>fornitori</small></div></div><div class="seg"><span class="lb">Indotto</span><div class="cb"><i class="idt-s"></i><i class="idt a-fade" style="--d:6.8s"></i><span class="a-fade" style="--d:6.8s">36%</span></div><div class="ft a-fade" style="--d:6.8s"><b>€755 mln</b><small>consumi delle famiglie</small></div></div></div>
@@ -1365,10 +1365,10 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-12">
         <div class="frame " data-dur="9.5" tabindex="0" role="button" aria-label="Scena 12, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="0.5" data-rate="0.9" src="assets/video/satellite-passaggio.mp4?v=1795694129" poster="assets/img/satellite-passaggio.jpg?v=1795694129" muted playsinline preload="none"></video>
-            <video class="ph clip2 a-cut" style="--d:5.42s;z-index:2" data-start="5.42" data-off="0.3" data-rate="1" src="assets/video/06_com-nave.mp4?v=1795694129" poster="assets/img/06_com-nave.jpg?v=1795694129" muted playsinline preload="none"></video>
-            <video class="ph clip2 a-cut" style="--d:6.18s;z-index:3" data-start="6.18" data-off="0" data-rate="1" src="assets/video/31_eo-ghiacciaio.mp4?v=1795694129" poster="assets/img/31_eo-ghiacciaio.jpg?v=1795694129" muted playsinline preload="none"></video>
-            <video class="ph clip2 a-cut" style="--d:7.14s;z-index:4" data-start="7.14" data-off="1" data-rate="1" src="assets/video/08_fin-sala-operativa.mp4?v=1795694129" poster="assets/img/08_fin-sala-operativa.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:1" data-start="0" data-off="0.5" data-rate="0.9" src="assets/video/satellite-passaggio.mp4?v=1795706871" poster="assets/img/satellite-passaggio.jpg?v=1795706871" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:5.42s;z-index:2" data-start="5.42" data-off="0.3" data-rate="1" src="assets/video/06_com-nave.mp4?v=1795706871" poster="assets/img/06_com-nave.jpg?v=1795706871" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:6.18s;z-index:3" data-start="6.18" data-off="0" data-rate="1" src="assets/video/31_eo-ghiacciaio.mp4?v=1795706871" poster="assets/img/31_eo-ghiacciaio.jpg?v=1795706871" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:7.14s;z-index:4" data-start="7.14" data-off="1" data-rate="1" src="assets/video/08_fin-sala-operativa.mp4?v=1795706871" poster="assets/img/08_fin-sala-operativa.jpg?v=1795706871" muted playsinline preload="none"></video>
           </div>
           <span class="tc">Sc. 12 · 1:22,0 – 1:31,5</span><span class="replay">↻ Rivedi</span><div class="safe"></div><div class="subz"></div>
         </div>
@@ -1387,7 +1387,7 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-13">
         <div class="frame " data-dur="9.0" tabindex="0" role="button" aria-label="Scena 13, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0.3" data-rate="1.0" src="assets/video/v3-autotreno.mp4?v=1795694129" poster="assets/img/v3-autotreno.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0.3" data-rate="1.0" src="assets/video/v3-autotreno.mp4?v=1795706871" poster="assets/img/v3-autotreno.jpg?v=1795706871" muted playsinline preload="none"></video>
             <div class="scuro"></div>
             <div class="g-tit a-up" style="--d:0.2s"><h4>Acquisti di beni e servizi della filiera</h4><p>quota che arriva dall'estero</p></div>
             <div class="cento">
@@ -1433,7 +1433,7 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
           <dl>
             <div><dt>Voiceover</dt><dd class="vo">Per evitare dispersioni al di fuori dell'economia europea, le regole stanno cambiando. In particolare, l'economia dello spazio entra nel Fondo Europeo per la Competitività.<span class="w">24 parole · circa 10,9 s a 2,2 parole al secondo</span></dd></div>
             <div><dt>Su schermo</dt><dd>Titolo «Il nuovo quadro normativo». Legenda (Europa · Italia · in vigore o approvato · proposto o in negoziato) e una linea del tempo con cinque box senza descrizioni: <b>Legge 89/2025</b> (Italia, in vigore, 25.06.2025), <b>QFP 2028–2034</b> (Europa, proposta, 16.07.2025), <b>ESA · Ministeriale di Brema</b> (Europa, approvato, 27.11.2025), <b>Documento strategico di politica spaziale</b> (Italia, approvato, 14.05.2026), <b>EU Space Act</b> (Europa, in negoziato, 19.11.2026).</dd></div>
-            <div><dt>Ritmo e sincronia</dt><dd class="prompt">I box entrano uno dopo l'altro sulla prima frase (da circa 1 s, uno ogni 0,9 s, ingresso più lento). Su «In particolare,…» il box QFP 2028–2034 si ingrandisce e passa in primo piano, con il bordo Lime e l'etichetta FOCUS; gli altri si attenuano.</dd></div>
+            <div><dt>Ritmo e sincronia</dt><dd class="prompt">I box entrano uno dopo l'altro sulla prima frase (da circa 1 s, uno ogni 0,9 s, ingresso più lento). Su «In particolare,…» il box QFP 2028–2034 si ingrandisce molto (circa un terzo, verso il basso) e passa in primo piano, con bordo Lime spesso, alone Lime e l'etichetta FOCUS; gli altri si spengono quasi del tutto e perdono il colore.</dd></div>
             <div><dt>Materiale</dt><dd class="prompt">Fondo nero con il campo di stelle. Box nello stile del sito (sezione quadro normativo): Europa lavanda, Italia rosa, pallino Lime = in vigore o approvato, arancio = proposto o in negoziato.</dd></div>
             <div><dt>Nota</dt><dd class="note">Rev 6: scena nuova al posto della 13bis e della vecchia 15. Nel deck non c'è una fonte per questo frame: va indicata.</dd></div>
           </dl>
@@ -1442,7 +1442,7 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-15">
         <div class="frame " data-dur="20.5" tabindex="0" role="button" aria-label="Scena 15, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="0.32" src="assets/video/v3-parlamento.mp4?v=1795694129" poster="assets/img/v3-parlamento.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="0.32" src="assets/video/v3-parlamento.mp4?v=1795706871" poster="assets/img/v3-parlamento.jpg?v=1795706871" muted playsinline preload="none"></video>
             <div class="scuro l a-fade" style="--d:3.6s"></div><div class="scuro l" style="opacity:.35"></div>
             <div class="g-tit a-up" style="--d:4.1s"><h4>La dotazione aumenta</h4><p>€ mld, prezzi correnti</p></div>
             <div class="dot15 a-fade" style="--d:4.6s">
@@ -1475,17 +1475,17 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
             <div class="g-tit a-up" style="--d:0s"><h4>Risorse per ogni fase del ciclo</h4></div>
             <div class="fasi">
               <figure class="a-up" style="--d:0.2s"><div class="im">
-            <video class="ph clip2 a-cut" style="--d:0.2s;z-index:1" data-start="0.2" data-off="0.3" data-rate="1" src="assets/video/laboratorio.mp4?v=1795694129" poster="assets/img/laboratorio.jpg?v=1795694129" muted playsinline preload="none"></video></div><figcaption>RICERCA</figcaption></figure>
+            <video class="ph clip2 a-cut" style="--d:0.2s;z-index:1" data-start="0.2" data-off="0.3" data-rate="1" src="assets/video/laboratorio.mp4?v=1795706871" poster="assets/img/laboratorio.jpg?v=1795706871" muted playsinline preload="none"></video></div><figcaption>RICERCA</figcaption></figure>
               <figure class="a-up" style="--d:0.8s"><div class="im">
-            <video class="ph clip2 a-cut" style="--d:0.8s;z-index:1" data-start="0.8" data-off="0.3" data-rate="1" src="assets/video/termovuoto.mp4?v=1795694129" poster="assets/img/termovuoto.jpg?v=1795694129" muted playsinline preload="none"></video></div><figcaption>SVILUPPO</figcaption></figure>
+            <video class="ph clip2 a-cut" style="--d:0.8s;z-index:1" data-start="0.8" data-off="0.3" data-rate="1" src="assets/video/termovuoto.mp4?v=1795706871" poster="assets/img/termovuoto.jpg?v=1795706871" muted playsinline preload="none"></video></div><figcaption>SVILUPPO</figcaption></figure>
               <figure class="a-up" style="--d:1.4s"><div class="im">
-            <video class="ph clip2 a-cut" style="--d:1.4s;z-index:1" data-start="1.4" data-off="0.3" data-rate="1" src="assets/video/v3-linea-produzione.mp4?v=1795694129" poster="assets/img/v3-linea-produzione.jpg?v=1795694129" muted playsinline preload="none"></video></div><figcaption>INDUSTRIALIZZAZIONE E CAPACITÀ PRODUTTIVA</figcaption></figure>
+            <video class="ph clip2 a-cut" style="--d:1.4s;z-index:1" data-start="1.4" data-off="0.3" data-rate="1" src="assets/video/v3-linea-produzione.mp4?v=1795706871" poster="assets/img/v3-linea-produzione.jpg?v=1795706871" muted playsinline preload="none"></video></div><figcaption>INDUSTRIALIZZAZIONE E CAPACITÀ PRODUTTIVA</figcaption></figure>
               <figure class="a-up" style="--d:2.0s"><div class="im">
-            <video class="ph clip2 a-cut" style="--d:2.0s;z-index:1" data-start="2.0" data-off="0.3" data-rate="1" src="assets/video/v3-lancio.mp4?v=1795694129" poster="assets/img/v3-lancio.jpg?v=1795694129" muted playsinline preload="none"></video></div><figcaption>MERCATO</figcaption></figure>
+            <video class="ph clip2 a-cut" style="--d:2.0s;z-index:1" data-start="2.0" data-off="0.3" data-rate="1" src="assets/video/v3-lancio.mp4?v=1795706871" poster="assets/img/v3-lancio.jpg?v=1795706871" muted playsinline preload="none"></video></div><figcaption>MERCATO</figcaption></figure>
             </div>
             <div class="matrice a-fade" style="--d:1.8s"><h5>Strumenti per fase e livello</h5><table><tr><th></th><th>Europee<span class="col a-fade" style="--d:5.0s;left:0;right:0;height:25.8cqw"></span></th><th>Nazionali<span class="col a-fade" style="--d:5.5s;left:0;right:0;height:25.8cqw"></span></th><th>Regionali<span class="col a-fade" style="--d:6.0s;left:0;right:0;height:25.8cqw"></span></th></tr><tr><td>Ricerca</td><td><span class="o" style="width:3.52cqw;height:3.52cqw"></span></td><td><span class="z">·</span></td><td><span class="o" style="width:2.42cqw;height:2.42cqw"></span></td></tr><tr><td>Sviluppo</td><td><span class="o" style="width:3.96cqw;height:3.96cqw"></span></td><td><span class="z">·</span></td><td><span class="o" style="width:2.42cqw;height:2.42cqw"></span></td></tr><tr><td>Industrializzazione</td><td><span class="o" style="width:3.30cqw;height:3.30cqw"></span></td><td><span class="o" style="width:2.42cqw;height:2.42cqw"></span></td><td><span class="o" style="width:2.42cqw;height:2.42cqw"></span></td></tr><tr><td>Capacità produttiva</td><td><span class="o" style="width:3.30cqw;height:3.30cqw"></span></td><td><span class="o" style="width:2.42cqw;height:2.42cqw"></span></td><td><span class="o" style="width:2.42cqw;height:2.42cqw"></span></td></tr><tr><td>Mercato</td><td><span class="o" style="width:2.64cqw;height:2.64cqw"></span></td><td><span class="z">·</span></td><td><span class="z">·</span></td></tr></table></div>
             <p class="g-src a-fade" style="--d:1.8s">Fonte: elaborazione OpenEconomics</p>
-            <video class="ph coda clip2 a-cut" style="--d:9.6s;z-index:6" data-start="9.6" data-off="1.2" data-rate="1" src="assets/video/v3-lancio.mp4?v=1795694129" poster="assets/img/v3-lancio.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph coda clip2 a-cut" style="--d:9.6s;z-index:6" data-start="9.6" data-off="1.2" data-rate="1" src="assets/video/v3-lancio.mp4?v=1795706871" poster="assets/img/v3-lancio.jpg?v=1795706871" muted playsinline preload="none"></video>
           </div>
           <span class="tc">Sc. 16 · 2:12,0 – 2:23,0</span><span class="replay">↻ Rivedi</span><div class="safe"></div><div class="subz"></div>
         </div>
@@ -1504,13 +1504,13 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
       <article class="beat " id="scena-17">
         <div class="frame " data-dur="9.5" tabindex="0" role="button" aria-label="Scena 17, rivedi animazione">
           <div class="stage">
-            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="0.7" src="assets/video/fondo-logo.mp4?v=1795694129" poster="assets/img/fondo-logo.jpg?v=1795694129" muted playsinline preload="none"></video>
+            <video class="ph clip2 a-cut" style="--d:0s;z-index:0" data-start="0" data-off="0" data-rate="0.7" src="assets/video/fondo-logo.mp4?v=1795706871" poster="assets/img/fondo-logo.jpg?v=1795706871" muted playsinline preload="none"></video>
             <div class="cartello a-sfuma" style="--d:7.5s">
               <svg class="logo a-fade" style="--d:.3s" viewBox="0 0 300 160" role="img" aria-label="orbita"></svg>
               <p class="os a-fade" style="--d:.9s">OSSERVATORIO SPACE ECONOMY ITALIA</p>
               <p class="cu a-fade" style="--d:1.3s">A cura di Inrete con il supporto scientifico di OpenEconomics</p>
             </div>
-            <div class="loghi a-sfuma" style="--d:7.5s"><img class="oe a-fade" style="--d:1.6s" src="assets/loghi/oe-logo-white.svg?v=1795694129" alt="OpenEconomics"><img class="ir a-fade" style="--d:1.6s" src="assets/loghi/inrete-logo-negativo.svg?v=1795694129" alt="Inrete"></div>
+            <div class="loghi a-sfuma" style="--d:7.5s"><img class="oe a-fade" style="--d:1.6s" src="assets/loghi/oe-logo-white.svg?v=1795706871" alt="OpenEconomics"><img class="ir a-fade" style="--d:1.6s" src="assets/loghi/inrete-logo-negativo.svg?v=1795706871" alt="Inrete"></div>
           </div>
           <span class="tc">Sc. 17 · 2:23,0 – 2:32,5</span><span class="replay">↻ Rivedi</span><div class="safe"></div><div class="subz"></div>
         </div>
@@ -1556,7 +1556,7 @@ footer.piede .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
 
 <footer class="piede"><div class="wrap"><span>Storyboard Orbita · sceneggiatura rev 5 del 24/11/2026</span><span>Inrete con il supporto scientifico di OpenEconomics</span></div></footer>
 
-<script src="assets/data/italia-punti.js?v=1795694129"></script>
+<script src="assets/data/italia-punti.js?v=1795706871"></script>
 <script>
 /* ---------- Campo stellare ---------- */
 (function () {
