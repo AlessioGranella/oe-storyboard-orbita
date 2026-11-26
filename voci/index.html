@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><style>body{margin:0}</style>
+<title>Voci Orbita</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400;500;700&display=swap">
+<style>
+/* Una colonna di provini, stessa frase per tutti: si ascolta, si confronta l'altezza, si sceglie un numero. Grafica del sito Orbita. */
+:root{
+  --fondo:#05060f; --superficie:#0e1126; --filetto:#262b4a; --inchiostro:#f2f0fa; --tenue:#a7a9c6;
+  --nucleo:#c6f432; --nebulosa:#9b5cff; --braccio:#3a56ff; --corallo:#ff5d6c;
+  --f-display:"Archivo",system-ui,sans-serif; --f-testo:"Roboto",system-ui,sans-serif; --f-dati:"Roboto Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+body{background:var(--fondo);color:var(--inchiostro);font:400 16px/1.55 var(--f-testo)}
+.wrap{max-width:1040px;margin:0 auto;padding-block:48px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eti{font:500 12px/1 var(--f-dati);letter-spacing:.14em;text-transform:uppercase;color:var(--nucleo)}
+h1{font:800 clamp(30px,5vw,46px)/1.05 var(--f-display);letter-spacing:-.02em;margin:14px 0 16px;text-wrap:balance}
+.lead{font-weight:300;font-size:18px;max-width:62ch;margin:0}
+.frase{margin:28px 0 0;padding:18px 20px;border:1px dashed var(--nucleo);background:var(--superficie);font-size:17px;max-width:70ch}
+.frase span{display:block;font:500 11px/1 var(--f-dati);letter-spacing:.12em;color:var(--tenue);margin-bottom:10px;text-transform:uppercase}
+h2{font:700 22px/1.2 var(--f-display);margin:52px 0 6px}
+.sub{color:var(--tenue);margin:0 0 18px;font-size:15px;max-width:70ch}
+.lista{display:grid;gap:10px}
+.voce{display:grid;grid-template-columns:52px minmax(0,1fr) minmax(220px,300px);gap:6px 18px;align-items:center;padding:16px 18px;background:var(--superficie);border:1px solid var(--filetto)}
+.voce .n{font:700 26px/1 var(--f-dati);color:var(--nucleo);font-variant-numeric:tabular-nums}
+.voce h3{margin:0;font:700 18px/1.2 var(--f-display)}
+.voce h3 small{font:500 11px/1 var(--f-dati);letter-spacing:.1em;text-transform:uppercase;color:var(--tenue);margin-left:8px;vertical-align:2px}
+.voce p{margin:4px 0 0;color:var(--tenue);font-size:14.5px}
+.misure{display:flex;gap:14px;align-items:center;margin-top:8px;font:500 12px/1 var(--f-dati);color:var(--inchiostro);font-variant-numeric:tabular-nums}
+.barra{position:relative;width:110px;height:6px;background:var(--filetto)}
+.barra i{position:absolute;left:0;top:0;bottom:0;background:var(--braccio)}
+audio{width:100%;height:40px;color-scheme:dark}
+.voce.rif{border-style:dashed}
+.voce.no{opacity:.55}
+.voce.no .n{color:var(--corallo)}
+.stato{font:700 10.5px/1 var(--f-dati);letter-spacing:.1em;text-transform:uppercase;padding:4px 6px;border:1px solid currentColor;margin-left:8px;vertical-align:2px}
+.stato.no{color:var(--corallo)}.stato.rif{color:var(--tenue)}
+.nota{margin-top:40px;color:var(--tenue);font-size:14px;max-width:70ch}
+@media (max-width:720px){.voce{grid-template-columns:40px minmax(0,1fr)}.voce .player{grid-column:1/-1}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<main class="wrap">
+  <span class="eti">Orbita · video di apertura · scelta della voce</span>
+  <h1>Provini di voce per il video di Orbita</h1>
+  <p class="lead">Ogni voce legge la stessa frase della scena 6, con l'indicazione «tono basso, autorevole e assertivo». Accanto al nome c'è l'altezza media della voce: più il numero è basso, più la voce è grave. Scegli il numero e rifaccio tutte le battute e il montaggio.</p>
+  <p class="frase"><span>La frase dei provini · scena 6</span>Secondo le stime di OpenEconomics, ogni euro speso genera un euro e dodici centesimi di PIL, contro i novantacinque centesimi della spesa pubblica media.</p>
+
+  <h2>Nuovi provini</h2>
+  <p class="sub">Tre voci italiane native che non avevamo provato e quattro voci Google (Gemini), istruite a leggere in italiano standard. Tutte dicono il testo esatto: l'ho controllato trascrivendole.</p>
+  <div class="lista" id="nuovi"></div>
+
+  <h2>Giro precedente e riferimento</h2>
+  <p class="sub">Le voci già ascoltate, per confronto.</p>
+  <div class="lista" id="prima"></div>
+
+  <p class="nota">Altezza = mediana della frequenza fondamentale sulla frase. La durata dipende dal ritmo di ciascuna voce: in montaggio la velocità si regola.</p>
+</main>
+
+<script>
+var VOCI = [
+  {n:5,  nome:'Lorenzo Piras', fonte:'ElevenLabs · italiano', hz:101, s:9.4,  txt:'Voce sui 40 anni, con il respiro naturale. Tra le più gravi.', f:'5-Lorenzo-Piras', g:'nuovi'},
+  {n:6,  nome:'Luca Bianchi', fonte:'ElevenLabs · italiano', hz:101, s:11.8, txt:'Calma e seria, più lenta. Grave come Lorenzo Piras.', f:'6-Luca-Bianchi', g:'nuovi'},
+  {n:7,  nome:'Riccardo Lombardi', fonte:'ElevenLabs · italiano', hz:140, s:11.2, txt:'Da documentario, con un leggero accento siciliano.', f:'7-Riccardo-Lombardi', g:'nuovi'},
+  {n:8,  nome:'Charon', fonte:'Google Gemini', hz:117, s:10.9, txt:'Informativa e chiara.', f:'8-Charon-Google', g:'nuovi'},
+  {n:9,  nome:'Orus', fonte:'Google Gemini', hz:140, s:13.3, txt:'Ferma e decisa. La più lenta.', f:'9-Orus-Google', g:'nuovi'},
+  {n:10, nome:'Alnilam', fonte:'Google Gemini', hz:126, s:10.3, txt:'Ferma e forte.', f:'10-Alnilam-Google', g:'nuovi'},
+  {n:11, nome:'Rasalgethi', fonte:'Google Gemini', hz:133, s:10.5, txt:'Informativa e professionale.', f:'11-Rasalgethi-Google', g:'nuovi'},
+  {n:0,  nome:'Simone Grimaldi', fonte:'ElevenLabs · italiano', hz:132, s:10.6, txt:'La voce del primo montaggio (24/11).', f:'0-Simone-Grimaldi-primo-montaggio', g:'prima', stato:'rif'},
+  {n:1,  nome:'Corrado Santoro', fonte:'ElevenLabs · italiano', hz:141, s:9.4,  txt:'Broadcast da documentario, piena ma più acuta.', f:'1-Corrado-Santoro', g:'prima'},
+  {n:2,  nome:'Enzo Romano', fonte:'ElevenLabs · italiano', hz:95,  s:9.8,  txt:'La più grave. Usata nel montaggio del 25/11, scartata.', f:'2-Enzo-Romano', g:'prima', stato:'no'},
+  {n:3,  nome:'Marco Esposito', fonte:'ElevenLabs · italiano', hz:130, s:10.1, txt:'Formale e chiara; la voce del video di Viterbo.', f:'3-Marco-Esposito', g:'prima'},
+  {n:4,  nome:'Giulio Ferrante', fonte:'ElevenLabs · italiano', hz:126, s:9.5,  txt:'Professionale, tono medio-basso.', f:'4-Giulio-Ferrante', g:'prima'}
+];
+var MIN = 90, MAX = 145;
+VOCI.forEach(function(v){
+  var el = document.createElement('article');
+  el.className = 'voce' + (v.stato ? ' ' + v.stato : '');
+  var badge = v.stato === 'no' ? '<span class="stato no">scartata</span>' : v.stato === 'rif' ? '<span class="stato rif">primo montaggio</span>' : '';
+  var w = Math.max(4, Math.min(100, (v.hz - MIN) / (MAX - MIN) * 100));
+  el.innerHTML =
+    '<span class="n">' + v.n + '</span>' +
+    '<div><h3>' + v.nome + '<small>' + v.fonte + '</small>' + badge + '</h3>' +
+    '<p>' + v.txt + '</p>' +
+    '<div class="misure"><span>' + v.hz + ' Hz</span><span class="barra" title="altezza"><i style="width:' + w.toFixed(0) + '%"></i></span><span>' + String(v.s.toFixed(1)).replace('.', ',') + ' s</span></div></div>' +
+    '<div class="player"><audio controls preload="none" src="audio/' + v.f + '.mp3" aria-label="Provino ' + v.nome + '"></audio></div>';
+  document.getElementById(v.g).appendChild(el);
+});
+/* un solo provino alla volta */
+document.addEventListener('play', function(e){
+  document.querySelectorAll('audio').forEach(function(a){ if (a !== e.target) a.pause(); });
+}, true);
+</script>
+
+</html>
